@@ -39,4 +39,13 @@ function M.open_terminal_right()
   vim.cmd.term()
 end
 
+function M.name_buffer()
+  vim.ui.input({ prompt = "Enter terminal name: " }, function(name)
+    if name == nil or vim.trim(name) == "" then
+      return
+    end
+    vim.api.nvim_buf_set_name(0, name)
+  end)
+end
+
 return M

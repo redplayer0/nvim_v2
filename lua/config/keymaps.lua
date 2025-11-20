@@ -4,6 +4,8 @@ local map = vim.keymap.set
 -- Terminal Mappings
 -- map("n", "<leader>tt", utils.open_terminal_bottom, { desc = "Open terminal" })
 -- map("n", "<leader>tr", utils.open_terminal_right, { desc = "Open terminal" })
+map("n", "<leader>t", ":terminal<CR>", { desc = "Open Terminal" })
+map("n", "<leader>nb", utils.name_buffer, { desc = "Name buffer" })
 map("t", "jk", vim.cmd.stopinsert, { desc = "Better escape" })
 -- map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 -- map("t", "<c-_>", "<cmd>close<cr>", { desc = "which_key_ignore" })

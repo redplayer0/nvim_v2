@@ -140,8 +140,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
   group = augroup("nvim_terminal"),
   callback = function()
-    vim.opt.number = false
-    vim.opt.relativenumber = false
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
     -- vim.opt_local.buflisted = false
     -- vim.bo.bufhidden = "hide"
   end
